@@ -35,8 +35,6 @@ function createDependencyContainer() {
   };
 }
 
-const dependencyContainer = createDependencyContainer();
-
 class TodoApiService {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -71,6 +69,8 @@ class TodoFormatter {
     return todo.title + ' - ' + (todo.completed ? 'done.' : 'not done.');
   }
 }
+
+const dependencyContainer = createDependencyContainer();
 
 dependencyContainer.register(
   'baseUrl',
